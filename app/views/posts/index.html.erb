@@ -1,0 +1,18 @@
+<% @posts.each do |post| %>
+
+<div class="post-wrapper">
+
+	<tbody>
+		<h2 class="title">
+
+			<%= link_to post.title, post %> 
+		</h2>
+		<tr>
+			<td><%= truncate(post.body, length: 50) %></td>
+		</tr>
+		<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+	</tbody>
+	
+</div> 
+
+<% end %>
